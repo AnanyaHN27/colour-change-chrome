@@ -1,8 +1,33 @@
 <html>
+<style>
+    body{
+        min-width: 200px;
+    }
+    .wrapper{
+        text-align: center;
+    }
+    .redButton{
+        height: 30px;
+        outline: none;
+        color: red;
+        width: 120px;
+    }
+    .blueButton{
+        height: 30px;
+        outline: none;
+        color: blue;
+        width: 120px;
+    }
+</style>
 <body>
-<p>What is your reading speed, bestie?</p>
-<input type="text" name="readingSpeed" id="speed" value="value">
-
+<h3 align="center">Choose a colour</h3>
+<div class="wrapper">
+    <button id="nameRed" type="button" class="redButton">Make text red</button>
+</div>
 <br>
+<div class="wrapper">
+    <button id="nameBlue" type="button" class="blueButton">Make text blue</button>
+</div>
+<script src="content.js"></script>
 </body>
 </html>
