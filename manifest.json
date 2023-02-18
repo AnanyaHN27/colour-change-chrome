@@ -1,33 +1,23 @@
 {
-  "name": "Change Colors",
-  "version": "2.144",
-  "description": "Changes text colour",
   "manifest_version": 2,
-  "permissions": [
-    "declarativeContent",
-    "storage",
-    "activeTab",
-    "tabs"
-  ],
-  "background": {
-    "scripts": [
-      "scripts/background.js"
-    ],
-    "persistent": false
+  "name": "Colour Changer",
+  "version": "1.0.0",
+  "description": "An extension to change the font colours on web pages for customisability",
+  "browser_action":{
+    "default_popup": "colour-picker.html"
   },
-  "page_action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "images/get_started16.png",
-      "32": "images/get_started32.png",
-      "48": "images/get_started48.png",
-      "128": "images/get_started128.png"
+  "permissions":["activeTab", "<all_urls>"],
+  "content_scripts":[
+    {
+      "matches":["<all_urls>"],
+      "js":["content.js"]
+
     }
-  },
+  ],
   "icons": {
     "16": "images/get_started16.png",
-    "32": "images/get_started32.png",
-    "48": "images/get_started48.png",
-    "128": "images/get_started128.png"
+    "48": "images/get_started48.png"
   }
+
+
 }
